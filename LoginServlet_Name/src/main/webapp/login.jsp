@@ -7,7 +7,12 @@
 <title>Login Servlet</title>
 </head>
 <body>
-	<form action="login" method="post">
+	<h1>ĐĂNG NHẬP</h1>
+
+	<%
+	String path = request.getContextPath();
+	%>
+	<form action="<%=path%>/login" method="post">
 		<table>
 			<tr>
 				<td><label for="ten">Tên: </label></td>
@@ -17,12 +22,12 @@
 			<tr>
 				<td><label for="username">Username: </label></td>
 				<td><input type="text" name="username" id="username"
-					placeholder="Nhập username" /></td>
+					placeholder="Nhập username" required /></td>
 			</tr>
 			<tr>
 				<td><label for="password">Password: </label></td>
-				<td><input type="text" name="password" id="password"
-					placeholder="Nhập password" /></td>
+				<td><input type="password" name="password" id="password"
+					placeholder="Nhập password" required /></td>
 			</tr>
 			<tr>
 				<td></td>
